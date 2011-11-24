@@ -38,7 +38,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>C:\Program Files\PCL 1.3.0\include\pcl-1.3\pcl\io\openni_camera;C:\Program Files\OpenNI\Include;C:\Program Files\VTK 5.8.0\include\vtk-5.8;C:\Program Files\Boost\include;C:\Program Files\Eigen\include;C:\Program Files\PCL 1.3.0\include\pcl-1.3\pcl\registration;C:\Program Files\PCL 1.3.0\include\pcl-1.3;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Program Files\Boost\lib;C:\Program Files\PCL 1.3.0\lib;$(LibraryPath)</LibraryPath>
+    <LibraryPath>C:\Program Files\Boost\lib;C:\Program Files\VTK 5.8.0\lib\vtk-5.8;C:\Program Files\PCL 1.3.0\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -47,7 +47,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>pcl_visualization-gd.lib;pcl_io-gd.lib;pcl_common-gd.lib;pcl_registration-gd.lib;pcl_kdtree-gd.lib;pcl_filters-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>vtkViews-gd.lib;pcl_visualization-gd.lib;pcl_io-gd.lib;pcl_common-gd.lib;pcl_registration-gd.lib;pcl_kdtree-gd.lib;vtkCommon-gd.lib;vtkRendering-gd.lib;pcl_filters-gd.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
