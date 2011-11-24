@@ -22,13 +22,14 @@ public:
 
 	// este metodo e invocado sempre que ocorre o evento de uma nova frame
 	void cloud_cb_ (const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud) {
-		pcl::PointCloud<pcl::PointXYZ> cloud2(*cloud);
        if (!viewer->wasStopped()){
          viewer -> showCloud (cloud);
-		 pcl::io::savePCDFileASCII("roda4.pcd", cloud2);
 	   }
 	}
 
+	void save(pcl::PointCloud<pcl::PointXYZ> cloud, char* dir){
+		pcl::io::savePCDFile(dir,cloud);
+	}
 
 	// 
 	void run(){
